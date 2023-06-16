@@ -33,7 +33,7 @@ export default function RootLayout({
           gtag('config', 'G-E4H2B0ZX1D');
           `}
       </Script>
-
+      <Analytics />
       <body>{children}</body>
     </html>
   );
