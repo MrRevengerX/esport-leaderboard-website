@@ -1,4 +1,5 @@
 import "./globals.css";
+import Script from "next/script";
 
 export const metadata = {
   metadataBase: new URL("https://xtremeleague.revengerx.dev"),
@@ -19,6 +20,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-E4H2B0ZX1D"
+      />
+      <Script id="google-analytics">
+        {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-E4H2B0ZX1D');
+          `}
+      </Script>
+
       <body>{children}</body>
     </html>
   );
