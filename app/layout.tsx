@@ -1,5 +1,6 @@
 import "./globals.css";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   metadataBase: new URL("https://xtremeleague.revengerx.dev"),
