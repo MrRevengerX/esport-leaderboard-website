@@ -4,7 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   metadataBase: new URL("https://xtremeleague.revengerx.dev"),
-  title: "Xtreme League",
+  title: { template: "%s", default: "Xtreme League" },
   description: "Xtreme League CODM Tournament Series",
   openGraph: {
     images: "/thumbnail.png",
