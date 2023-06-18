@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function NavBar() {
   return (
     <nav className="fixed z-50 min-w-full p-3 lg:pt-8">
-      <div className="flex justify-between rounded-2xl border border-primary600/40 p-3 backdrop-blur-sm lg:mx-auto lg:max-w-7xl">
+      <div className="flex justify-between rounded-2xl border border-primary600/40 bg-gray-900/30 p-3 backdrop-blur-sm lg:mx-auto lg:max-w-7xl">
         <div className="hidden items-center gap-4 text-2xl text-white lg:flex">
           <a href="https://www.facebook.com/MrRevengerX" target="_blank">
             <RiFacebookFill className="transition-colors duration-300 ease-in-out hover:text-primary600" />
