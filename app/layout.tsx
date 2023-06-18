@@ -1,6 +1,7 @@
 import "./globals.css";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
+import NavBar from "./components/navbar";
 
 export const metadata = {
   metadataBase: new URL("https://xtremeleague.revengerx.dev"),
@@ -34,7 +35,11 @@ export default function RootLayout({
           `}
       </Script>
       <Analytics />
-      <body>{children}</body>
+
+      <body className="bg-gray-900 font-poppins">
+        <NavBar />
+        {children}
+      </body>
     </html>
   );
 }
