@@ -1,3 +1,4 @@
+import PlayerLeaderboardCard from "./player-leaderboard-card";
 import TeamLeaderboardCard from "./team-leaderboard-card";
 
 export default function LeaderboardSection() {
@@ -10,6 +11,9 @@ export default function LeaderboardSection() {
         <TeamLeaderboardCard />
         <TeamLeaderboardCard />
         <TeamLeaderboardCard />
+        <PlayerLeaderboardCard />
+        <PlayerLeaderboardCard />
+        <PlayerLeaderboardCard />
       </div>
     </div>
   );

@@ -13,6 +13,10 @@
   grid-template-columns: 1fr 1fr 6fr 1fr;
 }
 
+.grid-cols_1_6_1 {
+  grid-template-columns: 1fr 7fr 1fr;
+}
+
 ::-moz-selection {
   color: white;
   background: #381277;
