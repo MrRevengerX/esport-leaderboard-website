@@ -7,7 +7,7 @@ export default function LeaderboardSection() {
       <h1 className="text-center text-4xl font-semibold text-white md:text-5xl lg:text-6xl">
         <span className="outline-text">Xtreme</span> Ranks
       </h1>
-      <div className="flex max-w-5xl flex-col gap-y-3 ">
+      <div className="leaderboard flex max-w-5xl flex-col gap-y-3 ">
         <TeamLeaderboardCard />
         <TeamLeaderboardCard />
         <TeamLeaderboardCard />

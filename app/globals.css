@@ -14,6 +14,18 @@
   -webkit-text-fill-color: transparent;
 }
 
+.leaderboard .lb-item:nth-child(1) {
+  border-bottom: 3px solid #ffd700;
+}
+
+.leaderboard .lb-item:nth-child(2) {
+  border-bottom: 3px solid #c0c0c0;
+}
+
+.leaderboard .lb-item:nth-child(3) {
+  border-bottom: 3px solid #cd7f32;
+}
+
 .grid-cols_1_1_6_1 {
   grid-template-columns: 1fr 1fr 6fr 1fr;
 }
