@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="select-none ">
       <Script
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-E4H2B0ZX1D"

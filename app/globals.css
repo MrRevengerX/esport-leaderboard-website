@@ -9,6 +9,11 @@
   -webkit-text-fill-color: transparent;
 }
 
+.outline-text-dark {
+  -webkit-text-stroke: 1.5px #111827;
+  -webkit-text-fill-color: transparent;
+}
+
 .grid-cols_1_1_6_1 {
   grid-template-columns: 1fr 1fr 6fr 1fr;
 }

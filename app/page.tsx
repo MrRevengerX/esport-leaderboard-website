@@ -6,12 +6,14 @@ import { useEffect } from "react";
 import NavBar from "./components/navbar";
 import Hero from "./components/hero";
 import LeaderboardSection from "./components/leaderboard-section";
+import RulesSection from "./components/rules-section";
 
 export default function Home() {
   return (
     <>
       <Hero />
       <LeaderboardSection />
+      <RulesSection />
     </>
   );
 }

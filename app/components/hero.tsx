@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <div className="relative flex min-h-screen select-none flex-col items-center justify-center gap-7  text-white md:gap-12 md:px-10 ">
+    <div className="relative flex min-h-screen flex-col items-center justify-center gap-7  text-white md:gap-12 md:px-10 ">
       <div className="text-5xl font-medium uppercase tracking-wider md:text-7xl">
         <h1 className="">Ascend to</h1>
         <h1 className="mt-2 text-primary600">Greatness</h1>
