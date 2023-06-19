@@ -7,6 +7,8 @@ import NavBar from "./components/navbar";
 import Hero from "./components/hero";
 import LeaderboardSection from "./components/leaderboard-section";
 import RulesSection from "./components/rules-section";
+import SocialSection from "./components/social-section";
+import Footer from "./components/footer";
 
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
       <Hero />
       <LeaderboardSection />
       <RulesSection />
+      <SocialSection />
+      <Footer />
     </>
   );
 }
