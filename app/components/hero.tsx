@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -11,12 +12,13 @@ export default function Hero() {
         Conquer the Leaderboard & Reign Supreme in Mobile Gaming!
       </p>
       <div className="">
-        <a
-          href=""
+        <Link
+          href="/register"
+          target="_blank"
           className="rounded-lg bg-primary600 px-10 py-3 tracking-wider text-gray-900 transition-colors duration-300 ease-in-out hover:bg-gray-800 hover:text-primary600 md:text-xl"
         >
           Register Now
-        </a>
+        </Link>
       </div>
 
       <Image
