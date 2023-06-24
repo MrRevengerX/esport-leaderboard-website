@@ -2,6 +2,7 @@
 import * as Tabs from "@radix-ui/react-tabs";
 import PlayerLeaderboardCard from "./player-leaderboard-card";
 import TeamLeaderboardCard from "./team-leaderboard-card";
+import { MdArrowForwardIos } from "react-icons/md";
 
 export default function LBTabs() {
   return (
@@ -24,21 +25,33 @@ export default function LBTabs() {
         </Tabs.Trigger>
       </Tabs.List>
       <Tabs.Content value="teams">
-        <div className="leaderboard flex max-w-5xl flex-col gap-y-3 ">
+        <div className="leaderboard flex max-w-5xl flex-col items-center gap-y-3 ">
           <TeamLeaderboardCard />
           <TeamLeaderboardCard />
           <TeamLeaderboardCard />
           <TeamLeaderboardCard />
           <TeamLeaderboardCard />
+          <a
+            href=""
+            className="mt-3 flex items-center justify-center gap-2 rounded-lg bg-primary600 px-6 py-2 transition-colors duration-300 ease-in-out hover:bg-gray-800 hover:text-primary600"
+          >
+            View all <MdArrowForwardIos />
+          </a>
         </div>
       </Tabs.Content>
       <Tabs.Content value="players">
-        <div className="leaderboard flex min-w-full max-w-5xl flex-col gap-y-3">
+        <div className="leaderboard flex min-w-full max-w-5xl flex-col items-center gap-y-3">
           <PlayerLeaderboardCard />
           <PlayerLeaderboardCard />
           <PlayerLeaderboardCard />
           <PlayerLeaderboardCard />
           <PlayerLeaderboardCard />
+          <a
+            href=""
+            className="mt-3 flex items-center justify-center gap-2 rounded-lg bg-primary600 px-6 py-2 transition-colors duration-300 ease-in-out hover:bg-gray-800 hover:text-primary600"
+          >
+            View all <MdArrowForwardIos />
+          </a>
         </div>
       </Tabs.Content>
     </Tabs.Root>
