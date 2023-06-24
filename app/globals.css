@@ -9,6 +9,10 @@
   -webkit-text-fill-color: transparent;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .outline-text-dark {
   -webkit-text-stroke: 1.5px #111827;
   -webkit-text-fill-color: transparent;
@@ -30,8 +34,8 @@
   grid-template-columns: 1fr 1fr 6fr 1fr;
 }
 
-.grid-cols_1_6_1 {
-  grid-template-columns: 1fr 7fr 1fr;
+.grid-cols_2_14_1 {
+  grid-template-columns: 2fr 14fr 1fr;
 }
 
 ::-moz-selection {
