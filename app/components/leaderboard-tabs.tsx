@@ -2,6 +2,7 @@
 import * as Tabs from "@radix-ui/react-tabs";
 import PlayerLeaderboardCard from "./player-leaderboard-card";
 import TeamLeaderboardCard from "./team-leaderboard-card";
+import Link from "next/link";
 
 export default function LBTabs() {
   return (
@@ -24,7 +25,16 @@ export default function LBTabs() {
         </Tabs.Trigger>
       </Tabs.List>
       <Tabs.Content value="teams">
-        <div className="leaderboard flex max-w-5xl flex-col gap-y-3 ">
+        <div className="leaderboard relative flex max-w-5xl flex-col items-center justify-center gap-y-3 p-2">
+          <div className="absolute flex h-full w-full items-center justify-center rounded-2xl bg-gray-800/80">
+            <Link
+              href="/register"
+              target="_blank"
+              className="rounded-lg bg-primary600 px-8 py-3 tracking-wider text-gray-900 transition-colors duration-300 ease-in-out hover:bg-gray-800 hover:text-primary600 md:text-xl lg:px-5 lg:text-base"
+            >
+              Register Now
+            </Link>
+          </div>
           <TeamLeaderboardCard />
           <TeamLeaderboardCard />
           <TeamLeaderboardCard />
@@ -33,7 +43,16 @@ export default function LBTabs() {
         </div>
       </Tabs.Content>
       <Tabs.Content value="players">
-        <div className="leaderboard flex min-w-full max-w-5xl flex-col gap-y-3">
+        <div className="leaderboard relative flex min-w-full max-w-5xl flex-col items-center justify-center gap-y-3 p-2">
+          <div className="absolute flex h-full w-full items-center justify-center rounded-2xl bg-gray-800/80">
+            <Link
+              href="/register"
+              target="_blank"
+              className="rounded-lg bg-primary600 px-8 py-3 tracking-wider text-gray-900 transition-colors duration-300 ease-in-out hover:bg-gray-800 hover:text-primary600 md:text-xl lg:px-5 lg:text-base"
+            >
+              Register Now
+            </Link>
+          </div>
           <PlayerLeaderboardCard />
           <PlayerLeaderboardCard />
           <PlayerLeaderboardCard />
