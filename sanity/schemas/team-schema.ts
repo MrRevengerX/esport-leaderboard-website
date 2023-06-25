@@ -92,6 +92,27 @@ const team = {
       group: "score",
     },
     {
+      title: "Matches Played",
+      name: "matchesPlayed",
+      type: "number",
+      initialValue: 0,
+      group: "score",
+    },
+    {
+      title: "Wins",
+      name: "wins",
+      type: "number",
+      initialValue: 0,
+      group: "score",
+    },
+    {
+      title: "Losses",
+      name: "losses",
+      type: "number",
+      initialValue: 0,
+      group: "score",
+    },
+    {
       title: "Points",
       name: "points",
       type: "number",

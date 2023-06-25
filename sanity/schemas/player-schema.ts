@@ -7,6 +7,10 @@ const player = {
       title: "Stats",
       name: "stats",
     },
+    {
+      title: "Points",
+      name: "points",
+    },
   ],
   fields: [
     {
@@ -15,30 +19,28 @@ const player = {
       type: "string",
     },
     {
-      title: "Slug",
-      name: "slug",
-      type: "slug",
-      options: {
-        source: "name",
-        maxLength: 96,
-        slugify: (input: string) =>
-          input.toLowerCase().replace(/\s+/g, "-").slice(0, 200),
-      },
-    },
-    {
       title: "IGN",
       name: "ign",
-      type: "string",
-    },
-    {
-      title: "UID",
-      name: "uid",
       type: "string",
     },
     {
       title: "Device",
       name: "device",
       type: "string",
+    },
+    {
+      title: "Placement",
+      name: "placement",
+      type: "number",
+      initialValue: 0,
+      group: "points",
+    },
+    {
+      title: "Points",
+      name: "points",
+      type: "number",
+      initialValue: 0,
+      group: "points",
     },
     {
       title: "Respawn Stats",

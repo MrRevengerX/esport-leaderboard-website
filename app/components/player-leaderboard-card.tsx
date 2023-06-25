@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import * as Dialog from "@radix-ui/react-dialog";
-import { MdArrowForwardIos } from "react-icons/md";
 import { IoClose } from "react-icons/io5";
 export default function PlayerLeaderboardCard() {
   return (
@@ -29,7 +28,9 @@ export default function PlayerLeaderboardCard() {
           </div>
 
           <div className="grid grid-cols-3 gap-2">
-            <p className="col-span-3 text-center">Respawn Stats</p>
+            <p className="col-span-3">Name : Ravindu Senarathna</p>
+            <p className="col-span-3">Device : iPad Pro 2021 11in</p>
+            <p className="col-span-3 mt-3 text-center">Respawn Stats</p>
             <div className="flex flex-col items-center justify-center rounded-xl bg-gray-700 px-5 py-3 text-white">
               <p className="text-2xl lg:text-3xl">1</p>
               <p className="text-xs lg:text-sm lg:font-light">Kills</p>
