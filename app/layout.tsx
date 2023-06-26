@@ -3,6 +3,7 @@ import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
 import NavBar from "./components/navbar";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Providers from "@/utils/provider";
 
 export const metadata = {
   metadataBase: new URL("https://xtremeleague.revengerx.dev"),
@@ -22,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="select-none ">
+    <html lang="en" className="select-none bg-gray-900 font-poppins">
       <Script
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-E4H2B0ZX1D"
@@ -36,7 +37,9 @@ export default function RootLayout({
           `}
       </Script>
       <Analytics />
-      <body className="bg-gray-900 font-poppins">{children}</body>
+      <body className="">
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
