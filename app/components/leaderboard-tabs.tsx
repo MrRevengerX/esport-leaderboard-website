@@ -4,7 +4,17 @@ import PlayerLeaderboardCard from "./player-leaderboard-card";
 import TeamLeaderboardCard from "./team-leaderboard-card";
 import { MdArrowForwardIos } from "react-icons/md";
 
+import { getTopTeams } from "@/api/api";
+
+import { useQuery } from "@tanstack/react-query";
+
 export default function LBTabs() {
+  const teamData = useQuery({
+    queryKey: ["teams"],
+    queryFn: getTopTeams,
+  });
+
+  console.log(teamData);
   return (
     <Tabs.Root
       className="flex max-w-5xl flex-col items-center gap-y-7"
@@ -26,11 +36,24 @@ export default function LBTabs() {
       </Tabs.List>
       <Tabs.Content value="teams">
         <div className="leaderboard flex max-w-5xl flex-col items-center gap-y-3 ">
+          {teamData.data?.map((team: any) => (
+            <TeamLeaderboardCard
+              key={team.id}
+              placement={team.placement}
+              teamName={team.name}
+              teamLogo={team.logo}
+              teamRank={team.rank}
+              teamPoints={team.points}
+              played={team.matchesPlayed}
+              wins={team.wins}
+              losses={team.losses}
+            />
+          ))}
+          {/* <TeamLeaderboardCard />
           <TeamLeaderboardCard />
           <TeamLeaderboardCard />
           <TeamLeaderboardCard />
-          <TeamLeaderboardCard />
-          <TeamLeaderboardCard />
+          <TeamLeaderboardCard /> */}
           <a
             href=""
             className="mt-3 flex items-center justify-center gap-2 rounded-lg bg-primary600 px-6 py-2 transition-colors duration-300 ease-in-out hover:bg-gray-800 hover:text-primary600"
