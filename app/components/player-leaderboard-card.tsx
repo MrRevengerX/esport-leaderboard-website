@@ -34,7 +34,7 @@ export default function PlayerLeaderboardCard(props: any) {
             <p className="col-span-3 text-center">Device : {props.device}</p>
             <p className="col-span-3 mt-3 text-center">Respawn Stats</p>
             <div className="flex flex-col items-center justify-center rounded-xl bg-gray-700 px-5 py-3 text-white">
-              <p className="text-2xl lg:text-3xl">1000</p>
+              <p className="text-2xl lg:text-3xl">{props.respawn.kills}</p>
               <p className="text-xs lg:text-sm lg:font-light">Kills</p>
             </div>
             <div className="flex flex-col items-center justify-center rounded-xl bg-gray-700 px-5 py-3 text-white">
