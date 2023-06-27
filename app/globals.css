@@ -35,7 +35,7 @@ html {
 }
 
 .grid-cols_2_14_1 {
-  grid-template-columns: 2fr 14fr 1fr;
+  grid-template-columns: 1fr 14fr 2fr;
 }
 
 ::-moz-selection {
