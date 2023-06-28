@@ -5,10 +5,14 @@ import { RxDiscordLogo } from "react-icons/rx";
 import Image from "next/image";
 import Link from "next/link";
 
+import { usePathname } from "next/navigation";
+
 export default function NavBar() {
   function scrollToTop() {
     window.scrollTo(0, 0);
   }
+  const path = usePathname();
+  console.log(path);
   return (
     <nav className="fixed z-50 min-w-full p-3 lg:pt-8">
       <div className="flex justify-between rounded-2xl border border-primary600/40 bg-gray-900/30 p-3 backdrop-blur-sm lg:mx-auto lg:max-w-7xl">
@@ -26,14 +30,27 @@ export default function NavBar() {
             <RxDiscordLogo className="transition-colors duration-300 ease-in-out hover:text-primary600" />
           </a>
         </div>
-        <Image
-          onClick={scrollToTop}
-          src="/assets/svg/xtreme-league-logo.svg"
-          width={50}
-          height={50}
-          alt=""
-          className="cursor-pointer"
-        />
+        {path === "/" ? (
+          <Image
+            onClick={scrollToTop}
+            src="/assets/svg/xtreme-league-logo.svg"
+            width={50}
+            height={50}
+            alt=""
+            className="cursor-pointer"
+          />
+        ) : (
+          <Link href="/">
+            <Image
+              onClick={scrollToTop}
+              src="/assets/svg/xtreme-league-logo.svg"
+              width={50}
+              height={50}
+              alt=""
+              className="cursor-pointer"
+            />
+          </Link>
+        )}
 
         <Link
           href="/register"
