@@ -4,10 +4,14 @@ import { Analytics } from "@vercel/analytics/react";
 import NavBar from "./components/navbar";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Providers from "@/utils/provider";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   metadataBase: new URL("https://xtremeleague.revengerx.dev"),
-  title: { template: "%s", default: "Xtreme League" },
+  title: {
+    default: "Xtreme League",
+    template: "%s - Xtreme League",
+  },
   description: "Xtreme League CODM Tournament Series",
   openGraph: {
     images: "/thumbnail.png",
