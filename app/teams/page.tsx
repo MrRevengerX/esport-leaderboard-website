@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import TeamLeaderboard from "./team-leaderboard";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Teams",
