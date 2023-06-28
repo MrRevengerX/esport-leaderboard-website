@@ -10,10 +10,10 @@ export default function TopPlayers() {
   });
   return (
     <div className="leaderboard flex min-w-full max-w-5xl flex-col items-center gap-y-3">
-      {playerData.data?.map((player: any, i: number) => (
+      {playerData.data?.map((player: any) => (
         <PlayerLeaderboardCard
           key={player._id}
-          placement={i + 1}
+          placement={player.placement}
           name={player.name}
           ign={player.ign}
           points={player.points}
@@ -21,7 +21,7 @@ export default function TopPlayers() {
           respawn={player.respawnStats}
           snd={player.sndStats}
           lethal={player.lethalKills}
-          team={player.team.name}
+          team={player.team.name ? player.team.name : ""}
         />
       ))}
       <a
