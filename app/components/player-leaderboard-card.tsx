@@ -9,7 +9,9 @@ export default function PlayerLeaderboardCard(props: any) {
         <div className="lb-item grid-cols_2_14_1 grid min-h-[60px] min-w-full cursor-pointer items-center gap-x-5 rounded-xl bg-gray-800 px-5 py-3 text-white lg:gap-x-8 lg:text-lg">
           <p className="text-center">#{props.placement}</p>
           <div className="">
-            <p className="text-xs font-light text-white/60">{props.team}</p>
+            <p className="text-xs font-light text-white/60">
+              {props.team.name}
+            </p>
             <p>{props.ign}</p>
           </div>
 
@@ -23,7 +25,7 @@ export default function PlayerLeaderboardCard(props: any) {
             <p className="text-4xl lg:text-5xl">#{props.placement}</p>
             <div className="text-xl font-medium lg:text-2xl">
               <p className="text-base font-light italic text-white/60">
-                {props.team}
+                {props.team.name}
               </p>
               <Dialog.Title>{props.ign}</Dialog.Title>
             </div>

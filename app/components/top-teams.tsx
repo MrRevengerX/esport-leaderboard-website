@@ -18,6 +18,7 @@ export default function TopTeams() {
           placement={team.placement}
           teamName={team.name}
           clan={team.clan}
+          slug={team.slug}
           teamLogo={team.logo}
           teamRank={team.rank}
           teamPoints={team.points}

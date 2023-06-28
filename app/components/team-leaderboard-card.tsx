@@ -2,6 +2,7 @@ import Image from "next/image";
 import * as Dialog from "@radix-ui/react-dialog";
 import { MdArrowForwardIos } from "react-icons/md";
 import { IoClose } from "react-icons/io5";
+import Link from "next/link";
 
 export default function TeamLeaderboardCard(props: any) {
   return (
@@ -76,9 +77,12 @@ export default function TeamLeaderboardCard(props: any) {
           </div>
 
           <Dialog.Close>
-            <div className="-mb-5 mt-3 flex items-center justify-center gap-2 rounded-lg bg-primary600 px-6 py-2 transition-colors duration-300 ease-in-out hover:bg-gray-800 hover:text-primary600">
+            <Link
+              href={`teams/${props.slug}`}
+              className="-mb-5 mt-3 flex items-center justify-center gap-2 rounded-lg bg-primary600 px-6 py-2 transition-colors duration-300 ease-in-out hover:bg-gray-800 hover:text-primary600"
+            >
               More details <MdArrowForwardIos />
-            </div>
+            </Link>
           </Dialog.Close>
           <Dialog.Close>
             <div className="absolute right-4 top-4">

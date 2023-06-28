@@ -12,7 +12,6 @@ export default function NavBar() {
     window.scrollTo(0, 0);
   }
   const path = usePathname();
-  console.log(path);
   return (
     <nav className="fixed z-50 min-w-full p-3 lg:pt-8">
       <div className="flex justify-between rounded-2xl border border-primary600/40 bg-gray-900/30 p-3 backdrop-blur-sm lg:mx-auto lg:max-w-7xl">

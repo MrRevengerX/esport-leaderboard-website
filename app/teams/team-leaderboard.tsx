@@ -4,7 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import TeamLeaderboardCard from "../components/team-leaderboard-card";
 import { getTeams } from "@/api/api";
 
-export default function TeamLeaderboard() {
+export default function PlayerLeaderboard() {
   const teamData = useQuery({
     queryKey: ["teams"],
     queryFn: getTeams,
@@ -17,6 +17,7 @@ export default function TeamLeaderboard() {
           placement={team.placement}
           teamName={team.name}
           clan={team.clan}
+          slug={team.slug}
           teamLogo={team.logo}
           teamRank={team.rank}
           teamPoints={team.points}

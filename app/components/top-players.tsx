@@ -2,6 +2,7 @@ import { MdArrowForwardIos } from "react-icons/md";
 import { useQuery } from "@tanstack/react-query";
 import { getTopPlayers } from "@/api/api";
 import PlayerLeaderboardCard from "./player-leaderboard-card";
+import Link from "next/link";
 
 export default function TopPlayers() {
   const playerData = useQuery({
@@ -21,11 +22,11 @@ export default function TopPlayers() {
           respawn={player.respawnStats}
           snd={player.sndStats}
           lethal={player.lethalKills}
-          team={player.team.name ? player.team.name : ""}
+          team={player.team ? player.team : ""}
         />
       ))}
-      <a
-        href=""
+      <Link
+        href="/players"
         className={
           playerData.isLoading
             ? "pointer-events-none mt-3 flex cursor-not-allowed items-center justify-center gap-2 rounded-lg bg-gray-800 px-6 py-2"
@@ -33,7 +34,7 @@ export default function TopPlayers() {
         }
       >
         View all <MdArrowForwardIos />
-      </a>
+      </Link>
     </div>
   );
 }
