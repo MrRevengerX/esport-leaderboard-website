@@ -7,5 +7,9 @@ export const metadata = {
 };
 
 export default function AdminDashboard() {
-  return <NextStudio config={config} />;
+  return (
+    <div className="absolute left-0 top-0 z-[100] w-screen">
+      <NextStudio config={config} />;
+    </div>
+  );
 }

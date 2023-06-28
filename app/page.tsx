@@ -13,8 +13,6 @@ import Footer from "./components/footer";
 export default function Home() {
   return (
     <>
-      <NavBar />
-
       <Hero />
       <LeaderboardSection />
       <RulesSection />

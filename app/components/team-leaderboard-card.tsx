@@ -10,13 +10,25 @@ export default function TeamLeaderboardCard(props: any) {
         <div className="lb-item grid-cols_1_1_6_1 grid min-h-[60px] min-w-full cursor-pointer items-center gap-x-5 rounded-xl bg-gray-800 px-5 py-3 text-white lg:gap-x-8 lg:text-lg">
           <p className="text-center">#{props.placement}</p>
           <Image
-            src={props.teamLogo}
+            src={
+              props.teamLogo
+                ? `${props.teamLogo}`
+                : "/assets/png/team-shield.png"
+            }
             width={50}
             height={50}
             alt=""
             className="rounded-md"
           />
-          <p>{props.teamName}</p>
+
+          <div className="">
+            {props.clan && (
+              <p className="text-xs font-light text-white/60">{props.clan}</p>
+            )}
+
+            <p>{props.teamName}</p>
+          </div>
+
           <p className="text-center">{props.teamPoints}</p>
         </div>
       </Dialog.Trigger>
@@ -28,13 +40,22 @@ export default function TeamLeaderboardCard(props: any) {
           </div>
           <div className="flex items-center justify-center gap-4 text-2xl font-medium lg:text-3xl">
             <Image
-              src={props.teamLogo}
+              src={
+                props.teamLogo
+                  ? `${props.teamLogo}`
+                  : "/assets/png/team-shield.png"
+              }
               alt=""
               width={50}
               height={50}
               className="rounded-md"
             />
-            <Dialog.Title>{props.teamName}</Dialog.Title>
+            <div className="">
+              {props.clan && (
+                <p className="text-xs font-light text-white/60">{props.clan}</p>
+              )}
+              <Dialog.Title>{props.teamName}</Dialog.Title>
+            </div>
           </div>
           <div className="grid grid-cols-3 gap-2">
             <div className="flex flex-col items-center justify-center rounded-xl bg-gray-700 px-5 py-3 text-white">

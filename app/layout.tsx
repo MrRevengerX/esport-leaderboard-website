@@ -38,6 +38,8 @@ export default function RootLayout({
       </Script>
       <Analytics />
       <body className="">
+        <NavBar />
+
         <Providers>{children}</Providers>
       </body>
     </html>
