@@ -76,14 +76,14 @@ export default function TeamLeaderboardCard(props: any) {
           </div>
 
           <Dialog.Close>
-            <button className="-mb-5 mt-3 flex items-center justify-center gap-2 rounded-lg bg-primary600 px-6 py-2 transition-colors duration-300 ease-in-out hover:bg-gray-800 hover:text-primary600">
+            <div className="-mb-5 mt-3 flex items-center justify-center gap-2 rounded-lg bg-primary600 px-6 py-2 transition-colors duration-300 ease-in-out hover:bg-gray-800 hover:text-primary600">
               More details <MdArrowForwardIos />
-            </button>
+            </div>
           </Dialog.Close>
           <Dialog.Close>
-            <button className="absolute right-4 top-4">
+            <div className="absolute right-4 top-4">
               <IoClose />
-            </button>
+            </div>
           </Dialog.Close>
         </Dialog.Content>
       </Dialog.Portal>
