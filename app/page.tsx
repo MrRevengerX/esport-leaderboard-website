@@ -9,6 +9,7 @@ import LeaderboardSection from "./components/leaderboard-section";
 import RulesSection from "./components/rules-section";
 import SocialSection from "./components/social-section";
 import Footer from "./components/footer";
+import Sponsors from "./components/sponsors";
 
 export default function Home() {
   return (
@@ -16,6 +17,8 @@ export default function Home() {
       <Hero />
       <LeaderboardSection />
       <RulesSection />
+      <Sponsors />
+
       <SocialSection />
       <Footer />
     </>

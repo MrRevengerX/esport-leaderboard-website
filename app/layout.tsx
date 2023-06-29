@@ -5,7 +5,7 @@ import NavBar from "./components/navbar";
 
 export const metadata = {
   metadataBase: new URL("https://xtremeleague.revengerx.dev"),
-  title: { template: "%s", default: "Xtreme League" },
+  title: { template: "%s - Xtreme League", default: "Xtreme League" },
   description: "Xtreme League CODM Tournament Series",
   openGraph: {
     images: "/thumbnail.png",

@@ -1,7 +1,7 @@
 import NavBar from "../components/navbar";
 
 export const metadata = {
-  title: "Xtreme League Rules & Regulations",
+  title: "Rules & Regulations",
   description:
     "Explore our detailed guidelines and point system that ensure fair play and an electrifying tournament experience.",
 };
