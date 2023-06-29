@@ -1,12 +1,12 @@
 "use client";
 
 import { getTeamBySlug } from "@/api/api";
-import TeamPageContent from "@/app/admin/[[...index]]/team-page-content";
 import PlayerLeaderboardCard from "@/app/components/player-leaderboard-card";
 import TeamLeaderboardCard from "@/app/components/team-leaderboard-card";
 import { useQuery } from "@tanstack/react-query";
 import Image from "next/image";
 import { useState } from "react";
+import TeamPageContent from "./team-page-content";
 
 export default function Page({ params }: { params: { slug: string } }) {
   return (

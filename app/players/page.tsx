@@ -3,7 +3,9 @@ import { Metadata } from "next";
 import TeamLeaderboard from "./player-leaderboard";
 
 export const metadata: Metadata = {
-  title: "Teams",
+  title: "Players",
+  description:
+    "Unveil the exceptional talent and skills of our tournament's players! Check out their impressive stats and rankings, and witness their expertise, precision, and dedication in action as they showcase their prowess in thrilling matches.",
 };
 
 export default function Players() {
