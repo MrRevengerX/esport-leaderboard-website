@@ -6,12 +6,13 @@ import NavBar from "./components/navbar";
 export const metadata = {
   metadataBase: new URL("https://xtremeleague.revengerx.dev"),
   title: { template: "%s - Xtreme League", default: "Xtreme League" },
-  description: "Xtreme League CODM Tournament Series",
+  description:
+    " Don't miss your chance to be part of this epic esports event. Register now and secure your spot in the tournament. Let the games begin!",
   openGraph: {
-    images: "/thumbnail.png",
+    images: "/xtremeleague-thumbnail.png",
   },
   twitter: {
-    images: "/thumbnail.png",
+    images: "/xtremeleague-thumbnail.png",
   },
 };
 
