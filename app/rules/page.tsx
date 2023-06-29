@@ -8,5 +8,6 @@ export default function Rules() {
       "https://drive.google.com/file/d/1kjgYQApVDwYJzqcCbvgmaBFA6DVdjk5_/view?usp=sharing"
     );
   }, []);
+
   return;
 }
