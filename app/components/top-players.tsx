@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { getTopPlayers } from "@/api/api";
 import PlayerLeaderboardCard from "./player-leaderboard-card";
 import Link from "next/link";
+import PlayerLBCardSkeleton from "./skeletons/player-lb-card-skeleton";
 
 export default function TopPlayers() {
   const playerData = useQuery({
@@ -10,21 +11,32 @@ export default function TopPlayers() {
     queryFn: getTopPlayers,
   });
   return (
-    <div className="leaderboard flex min-w-full max-w-5xl flex-col items-center gap-y-3">
-      {playerData.data?.map((player: any) => (
-        <PlayerLeaderboardCard
-          key={player._id}
-          placement={player.placement}
-          name={player.name}
-          ign={player.ign}
-          points={player.points}
-          device={player.device}
-          respawn={player.respawnStats}
-          snd={player.sndStats}
-          lethal={player.lethalKills}
-          team={player.team ? player.team : ""}
-        />
-      ))}
+    <div className="leaderboard flex min-w-full max-w-[22rem] flex-col items-center gap-y-3 md:max-w-5xl">
+      {playerData.isLoading ? (
+        <>
+          <PlayerLBCardSkeleton />
+          <PlayerLBCardSkeleton />
+          <PlayerLBCardSkeleton />
+          <PlayerLBCardSkeleton />
+          <PlayerLBCardSkeleton />
+        </>
+      ) : (
+        playerData.data?.map((player: any) => (
+          <PlayerLeaderboardCard
+            key={player._id}
+            placement={player.placement}
+            name={player.name}
+            ign={player.ign}
+            points={player.points}
+            device={player.device}
+            respawn={player.respawnStats}
+            snd={player.sndStats}
+            lethal={player.lethalKills}
+            team={player.team ? player.team : ""}
+          />
+        ))
+      )}
+
       <Link
         href="/players"
         className={

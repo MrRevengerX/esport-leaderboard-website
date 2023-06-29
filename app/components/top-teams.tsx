@@ -3,6 +3,7 @@ import TeamLeaderboardCard from "./team-leaderboard-card";
 import { useQuery } from "@tanstack/react-query";
 import { getTopTeams } from "@/api/api";
 import Link from "next/link";
+import TeamLBCardSekeleton from "./skeletons/team-lb-card-skeleton";
 
 export default function TopTeams() {
   const teamData = useQuery({
@@ -11,27 +12,33 @@ export default function TopTeams() {
   });
 
   return (
-    <div className="leaderboard flex max-w-5xl flex-col items-center gap-y-3 ">
-      {teamData.data?.map((team: any) => (
-        <TeamLeaderboardCard
-          key={team._id}
-          placement={team.placement}
-          teamName={team.name}
-          clan={team.clan}
-          slug={team.slug}
-          teamLogo={team.logo}
-          teamRank={team.rank}
-          teamPoints={team.points}
-          played={team.matchesPlayed}
-          wins={team.wins}
-          losses={team.losses}
-        />
-      ))}
-      {/* <TeamLeaderboardCard />
-    <TeamLeaderboardCard />
-    <TeamLeaderboardCard />
-    <TeamLeaderboardCard />
-    <TeamLeaderboardCard /> */}
+    <div className="leaderboard flex max-w-[22rem] flex-col items-center gap-y-3 md:max-w-5xl ">
+      {teamData.isError && <div>Something went wrong</div>}
+      {teamData.isLoading ? (
+        <>
+          <TeamLBCardSekeleton key={"sss"} />
+          <TeamLBCardSekeleton />
+          <TeamLBCardSekeleton />
+          <TeamLBCardSekeleton />
+          <TeamLBCardSekeleton />
+        </>
+      ) : (
+        teamData.data?.map((team: any) => (
+          <TeamLeaderboardCard
+            key={team._id}
+            placement={team.placement}
+            teamName={team.name}
+            clan={team.clan}
+            slug={team.slug}
+            teamLogo={team.logo}
+            teamRank={team.rank}
+            teamPoints={team.points}
+            played={team.matchesPlayed}
+            wins={team.wins}
+            losses={team.losses}
+          />
+        ))
+      )}
       <Link
         href="/teams"
         className={
