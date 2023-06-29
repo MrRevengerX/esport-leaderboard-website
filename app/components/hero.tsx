@@ -22,7 +22,7 @@ export default function Hero() {
       </div>
 
       <Image
-        src="/assets/png/background.png"
+        src="/assets/png/background.jpg"
         fill
         className="-z-10 block bg-gray-900 object-cover"
         alt=""
