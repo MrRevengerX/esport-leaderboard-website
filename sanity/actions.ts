@@ -1,7 +1,7 @@
 import { dynamicClient } from "@/lib/sanity";
 
 export async function TeamPosUpdate() {
-  const query = `*[_type == "team" && points > 0] | order(points desc)`;
+  const query = `*[_type == "team" && points > 0 && !(_id in path("drafts.**"))] | order(points desc)`;
   const data = await dynamicClient.fetch(query);
 
   const patch = data.map((item: any, index: number) => {
@@ -19,7 +19,7 @@ export async function TeamPosUpdate() {
 }
 
 export async function PlayerPosUpdate() {
-  const query = `*[_type == "player" && points > 0] | order(points desc)`;
+  const query = `*[_type == "player" && points > 0 && !(_id in path("drafts.**"))] | order(points desc)`;
   const data = await dynamicClient.fetch(query);
   const patch = data.map((item: any, index: number) => {
     return {
