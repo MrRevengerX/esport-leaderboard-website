@@ -1,11 +1,24 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import Script from "next/script";
+import { Analytics } from "@vercel/analytics/react";
+import NavBar from "./components/navbar";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Providers from "@/utils/provider";
+import { Metadata } from "next";
 
-const inter = Inter({ subsets: ["latin"] });
-
-export const metadata = {
-  title: "Xtreme League",
+export const metadata: Metadata = {
+  metadataBase: new URL("https://xtremeleague.revengerx.dev"),
+  title: {
+    default: "Xtreme League",
+    template: "%s - Xtreme League",
+  },
   description: "Xtreme League CODM Tournament Series",
+  openGraph: {
+    images: "/thumbnail.png",
+  },
+  twitter: {
+    images: "/thumbnail.png",
+  },
 };
 
 export default function RootLayout({
@@ -14,8 +27,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className="select-none bg-gray-900 font-poppins">
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-E4H2B0ZX1D"
+      />
+      <Script id="google-analytics">
+        {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-E4H2B0ZX1D');
+          `}
+      </Script>
+      <Analytics />
+      <body className="">
+        <NavBar />
+
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
