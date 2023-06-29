@@ -29,6 +29,18 @@ const player = {
       type: "string",
     },
     {
+      title: "UID",
+      name: "uid",
+      type: "string",
+    },
+    {
+      title: "Subsitute",
+      description: "On this option if the player is a subtitute player",
+      initialValue: false,
+      name: "subtitute",
+      type: "boolean",
+    },
+    {
       title: "Placement",
       name: "placement",
       type: "number",

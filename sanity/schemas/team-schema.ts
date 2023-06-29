@@ -36,6 +36,12 @@ const team = {
       type: "image",
     },
     {
+      title: "Names",
+      name: "names",
+      type: "array",
+      of: [{ type: "player" }],
+    },
+    {
       title: "Players",
       name: "players",
       type: "object",
@@ -44,7 +50,7 @@ const team = {
           title: "Player 1 (Leader)",
           name: "player1",
           type: "reference",
-          to: [{ type: "player" }],
+          to: [{ type: "reference", to: [{ type: "player" }] }],
         },
         {
           title: "Player 2",
