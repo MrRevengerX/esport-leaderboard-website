@@ -11,7 +11,7 @@ export default function Hero() {
       <p className="mb-3 max-w-xs text-center font-light tracking-wide md:max-w-md md:text-xl">
         Conquer the Leaderboard & Reign Supreme in CoDM!
       </p>
-      <div className="flex flex-col gap-x-6 text-center lg:flex-row lg:gap-y-6">
+      <div className="flex flex-col gap-y-6 text-center lg:flex-row lg:gap-x-6">
         <Link
           href="/register"
           target="_blank"
