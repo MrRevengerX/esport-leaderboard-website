@@ -1,16 +1,18 @@
 import "./globals.css";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
+import NavBar from "./components/navbar";
 
 export const metadata = {
   metadataBase: new URL("https://xtremeleague.revengerx.dev"),
-  title: "Xtreme League",
-  description: "Xtreme League CODM Tournament Series",
+  title: { template: "%s - Xtreme League", default: "Xtreme League" },
+  description:
+    " Don't miss your chance to be part of this epic esports event. Register now and secure your spot in the tournament. Let the games begin!",
   openGraph: {
-    images: "/thumbnail.png",
+    images: "/xtremeleague-thumbnail.png",
   },
   twitter: {
-    images: "/thumbnail.png",
+    images: "/xtremeleague-thumbnail.png",
   },
 };
 
@@ -20,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="select-none ">
       <Script
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-E4H2B0ZX1D"
@@ -34,7 +36,11 @@ export default function RootLayout({
           `}
       </Script>
       <Analytics />
-      <body>{children}</body>
+
+      <body className="bg-gray-900 font-poppins">
+        <NavBar />
+        {children}
+      </body>
     </html>
   );
 }
