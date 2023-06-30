@@ -6,7 +6,7 @@ import { TbHourglassEmpty } from "react-icons/tb";
 export default function Rules() {
   useEffect(() => {
     window.location.replace(
-      "https://drive.google.com/file/d/1NfIOx-Q32FYU5S4ys8QCwnbsJltXcEYN/view?usp=sharing"
+      "https://drive.google.com/file/d/17G1QNgQAtEE2GINJUXdH4Tnnlw6E8EGq/view?usp=sharing"
     );
   }, []);
 
