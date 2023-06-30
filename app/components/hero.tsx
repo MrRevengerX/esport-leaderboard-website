@@ -24,7 +24,7 @@ export default function Hero() {
       <Image
         src="/assets/png/background.jpg"
         fill
-        className="-z-10 block bg-gray-900 object-cover"
+        className="-z-10 block bg-gray-900 object-cover transition-all duration-300 ease-in"
         alt=""
       />
     </div>
