@@ -9,15 +9,22 @@ export default function Hero() {
         <h1 className="mt-2 text-primary600">Greatness</h1>
       </div>
       <p className="mb-3 max-w-xs text-center font-light tracking-wide md:max-w-md md:text-xl">
-        Conquer the Leaderboard & Reign Supreme in Mobile Gaming!
+        Conquer the Leaderboard & Reign Supreme in CoDM!
       </p>
-      <div className="">
+      <div className="flex flex-col gap-x-6 text-center lg:flex-row lg:gap-y-6">
         <Link
           href="/register"
           target="_blank"
-          className="rounded-lg bg-primary600 px-10 py-3 tracking-wider text-gray-900 transition-colors duration-300 ease-in-out hover:bg-gray-800 hover:text-primary600 md:text-xl"
+          className="rounded-lg bg-primary600 px-8 py-2.5 tracking-wider text-gray-900 transition-colors duration-300 ease-in-out hover:bg-gray-800 hover:text-primary600 md:px-10 md:py-3 md:text-xl"
         >
-          Register Now
+          Register
+        </Link>
+        <Link
+          href="/rules"
+          target="_blank"
+          className="rounded-lg bg-primary600 px-8 py-2.5 tracking-wider text-gray-900 transition-colors duration-300 ease-in-out hover:bg-gray-800 hover:text-primary600 md:px-10 md:py-3 md:text-xl"
+        >
+          Rules
         </Link>
       </div>
 

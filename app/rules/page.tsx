@@ -4,11 +4,11 @@ import { useEffect } from "react";
 import { TbHourglassEmpty } from "react-icons/tb";
 
 export default function Rules() {
-  // useEffect(() => {
-  //   window.location.replace(
-  //     "https://drive.google.com/file/d/1NfIOx-Q32FYU5S4ys8QCwnbsJltXcEYN/view?usp=sharing"
-  //   );
-  // }, []);
+  useEffect(() => {
+    window.location.replace(
+      "https://drive.google.com/file/d/1NfIOx-Q32FYU5S4ys8QCwnbsJltXcEYN/view?usp=sharing"
+    );
+  }, []);
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center gap-y-6 px-5">
