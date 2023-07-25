@@ -38,8 +38,7 @@ export default function TeamMembers(props: any) {
             />
           )
       )}
-
-      <h6 className="mt-3">Substitutes</h6>
+      {props.players.sub1?.subtitute && <h6 className="mt-3">Substitutes</h6>}
       {filteredPlayers.map(
         (player?: any) =>
           player.subtitute && (
