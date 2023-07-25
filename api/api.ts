@@ -33,7 +33,7 @@ export function getTeamBySlugsss(slug: string) {
 }
 
 export function getTeamBySlug(slug: string) {
-  const query = `*[_type == "team" && slug.current == "${slug}" && !(_id in path("drafts.**"))]{...,"logo":logo.asset->url,"players":players{player1->,player2->,player3->,player4->,player5,sub1->,sub2->}}`;
+  const query = `*[_type == "team" && slug.current == "${slug}" && !(_id in path("drafts.**"))]{...,"logo":logo.asset->url,"players":players{player1->,player2->,player3->,player4->,player5->,sub1->,sub2->}}`;
   const teams = staticClient.fetch(query);
   return teams;
 }

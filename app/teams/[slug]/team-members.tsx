@@ -7,7 +7,7 @@ export default function TeamMembers(props: any) {
     props.players.player2,
     props.players.player3,
     props.players.player4,
-    props.player5,
+    props.players.player5,
     props.sub1,
     props.sub2,
   ]);
