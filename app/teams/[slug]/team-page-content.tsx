@@ -41,7 +41,7 @@ export default function TeamPageContent(props: any) {
             </div>
             <div className="flex flex-col items-center justify-center rounded-xl bg-gray-700 px-5 py-3 text-white">
               <p className="text-2xl lg:text-3xl">{item.losses}</p>
-              <p className="text-xs lg:text-sm lg:font-light">Loss</p>
+              <p className="text-xs lg:text-sm lg:font-light">Losses</p>
             </div>
             <div className="col-span-3 rounded-xl bg-gray-700 p-4 text-center text-xs lg:text-lg">
               <p>Total Points : {item.points}</p>

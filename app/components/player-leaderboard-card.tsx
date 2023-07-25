@@ -54,11 +54,11 @@ export default function PlayerLeaderboardCard(props: any) {
             </div>
             <div className="flex flex-col items-center justify-center rounded-xl bg-gray-700 px-5 py-3 text-white">
               <p className="text-2xl lg:text-3xl">{props.snd.plant}</p>
-              <p className="text-xs lg:text-sm lg:font-light">Plant</p>
+              <p className="text-xs lg:text-sm lg:font-light">Plants</p>
             </div>
             <div className="flex flex-col items-center justify-center rounded-xl bg-gray-700 px-5 py-3 text-white">
               <p className="text-2xl lg:text-3xl">{props.snd.defuse}</p>
-              <p className="text-xs lg:text-sm lg:font-light">Defuse</p>
+              <p className="text-xs lg:text-sm lg:font-light">Defuses</p>
             </div>
             <p className="col-span-3 mt-3 text-center">Respawn & S&D Stats</p>
             <div className="col-span-3 rounded-xl bg-gray-700 p-4 text-center text-base lg:text-lg">
