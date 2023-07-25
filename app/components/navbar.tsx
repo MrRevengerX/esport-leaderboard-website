@@ -52,11 +52,11 @@ export default function NavBar() {
         )}
 
         <Link
-          href="/register"
+          href="/rules"
           target="_blank"
           className="rounded-lg bg-primary600 px-6 py-2 text-base text-gray-900 transition-colors duration-300 ease-in-out hover:bg-gray-800 hover:text-primary600 lg:px-8 lg:uppercase"
         >
-          Register
+          Rules
         </Link>
       </div>
     </nav>

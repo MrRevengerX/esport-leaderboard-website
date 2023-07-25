@@ -16,7 +16,7 @@ export default function TopTeams() {
       {teamData.isError && <div>Something went wrong</div>}
       {teamData.isLoading ? (
         <>
-          <TeamLBCardSekeleton key={"sss"} />
+          <TeamLBCardSekeleton />
           <TeamLBCardSekeleton />
           <TeamLBCardSekeleton />
           <TeamLBCardSekeleton />

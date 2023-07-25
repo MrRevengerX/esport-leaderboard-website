@@ -53,3 +53,8 @@ html {
   color: white;
   background: #381277;
 }
+
+.challonge-btn:hover svg {
+  fill: #ff7324;
+  transition: color ease-in-out 300ms;
+}
