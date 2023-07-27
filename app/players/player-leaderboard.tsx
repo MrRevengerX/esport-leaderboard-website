@@ -12,7 +12,7 @@ export default function TeamLeaderboard() {
   });
   return (
     <div className="leaderboard flex max-w-5xl flex-col items-center gap-y-3 ">
-      <div className="leaderboard flex min-w-full max-w-5xl flex-col items-center gap-y-3">
+      <div className="leaderboard flex min-w-full max-w-xl flex-col items-center gap-y-3">
         {playerData.isLoading ? (
           <>
             <PlayerLBCardSkeleton />

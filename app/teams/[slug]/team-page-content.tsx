@@ -11,7 +11,7 @@ export default function TeamPageContent(props: any) {
     queryFn: ({ queryKey }) => getTeamBySlug(queryKey[1]),
   });
   const data = teamData.data;
-  console.log(data);
+  // console.log(data);
   return (
     <>
       {data?.map((item: any) => (
