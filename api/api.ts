@@ -1,7 +1,7 @@
 import { staticClient } from "@/lib/sanity";
 
 export async function getTopTeams() {
-  const query = `*[_type == "team" && !(_id in path("drafts.**"))] | order(points desc, name asc)[0...3]{_id,name,"slug":slug.current,clan,"logo":logo.asset->url,placement,matchesPlayed,wins,losses,points}`;
+  const query = `*[_type == "team" && !(_id in path("drafts.**"))] | order(placement asc, name asc)[0...5]{_id,name,"slug":slug.current,clan,"logo":logo.asset->url,placement,matchesPlayed,wins,losses,points}`;
   const teams = await staticClient.fetch(query);
   return teams;
 }
@@ -13,7 +13,7 @@ export async function getTopPlayers() {
 }
 
 export async function getTeams() {
-  const query = `*[_type == "team" && !(_id in path("drafts.**"))]| order(points desc, name asc){_id,name,"slug":slug.current,clan,"logo":logo.asset->url,placement,matchesPlayed,wins,losses,points}`;
+  const query = `*[_type == "team" && !(_id in path("drafts.**"))]| order(placement asc, name asc){_id,name,"slug":slug.current,clan,"logo":logo.asset->url,placement,matchesPlayed,wins,losses,points}`;
   const teams = await staticClient.fetch(query);
   return teams;
 }

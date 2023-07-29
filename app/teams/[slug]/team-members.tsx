@@ -15,7 +15,7 @@ export default function TeamMembers(props: any) {
     player !== undefined ? player : null
   );
   filteredPlayers.sort((a, b) => {
-    return a.placement - b.placement;
+    return b.points - a.points;
   });
   // console.log("ssss", props.players.player2.subtitute);
   //   console.log(numAscending);

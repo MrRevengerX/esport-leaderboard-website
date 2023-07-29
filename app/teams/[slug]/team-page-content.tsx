@@ -51,7 +51,7 @@ export default function TeamPageContent(props: any) {
             <h2 className="mb-8 mt-4 text-center text-xl font-light">
               Team Members
             </h2>
-            <div className="flex max-w-5xl flex-col items-center gap-y-3 ">
+            <div className="flex max-w-xl flex-col items-center gap-y-3 ">
               <TeamMembers players={item.players} team={item} />
             </div>
           </div>

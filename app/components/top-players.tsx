@@ -11,7 +11,7 @@ export default function TopPlayers() {
     queryFn: getTopPlayers,
   });
   return (
-    <div className="leaderboard flex min-w-full max-w-[22rem] flex-col items-center gap-y-3 md:max-w-5xl">
+    <div className="leaderboard flex min-w-full max-w-[22rem] flex-col items-center gap-y-3 md:max-w-lg">
       {playerData.isLoading ? (
         <>
           <PlayerLBCardSkeleton />
