@@ -113,6 +113,13 @@ const player = {
       group: "stats",
       initialValue: 0,
     },
+    {
+      title: "Firstblood",
+      name: "firstblood",
+      type: "number",
+      group: "stats",
+      initialValue: 0,
+    },
   ],
 };
 

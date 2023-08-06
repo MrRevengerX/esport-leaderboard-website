@@ -32,6 +32,7 @@ export default function TopPlayers() {
             respawn={player.respawnStats}
             snd={player.sndStats}
             lethal={player.lethalKills}
+            firstblood={player.firstblood}
             team={player.team ? player.team : ""}
           />
         ))

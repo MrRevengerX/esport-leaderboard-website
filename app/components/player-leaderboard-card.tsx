@@ -61,8 +61,13 @@ export default function PlayerLeaderboardCard(props: any) {
               <p className="text-xs lg:text-sm lg:font-light">Defuses</p>
             </div>
             <p className="col-span-3 mt-3 text-center">Respawn & S&D Stats</p>
-            <div className="col-span-3 rounded-xl bg-gray-700 p-4 text-center text-base lg:text-lg">
-              <p>Lethal : {props.lethal}</p>
+            <div className="col-span-3 flex justify-center gap-x-2">
+              <div className="rounded-xl bg-gray-700 px-6 py-4 text-center text-base lg:text-lg">
+                <p>Lethal : {props.lethal}</p>
+              </div>
+              <div className="rounded-xl bg-gray-700 px-6 py-4 text-center text-base lg:text-lg">
+                <p>Firstblood : {props.firstblood}</p>
+              </div>
             </div>
 
             <p className="col-span-3 -mb-5 mt-5 text-center text-xl">
